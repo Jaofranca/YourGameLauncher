@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
-import 'home_page.dart';
+import 'home_screen.dart';
 
 class StartingPage extends StatefulWidget {
   const StartingPage({Key? key}) : super(key: key);

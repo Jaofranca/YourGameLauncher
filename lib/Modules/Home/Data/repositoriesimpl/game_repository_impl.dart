@@ -33,4 +33,14 @@ class GameRepositoryImpl implements GameRepository {
       return left(CacheFailure());
     }
   }
+
+  @override
+  Future<Either<Failure, void>> deleteGame(Game game) async {
+    try {
+      final result = await localDataSource.deleteGame(game);
+      return right(result);
+    } on CacheException {
+      return left(CacheFailure());
+    }
+  }
 }
