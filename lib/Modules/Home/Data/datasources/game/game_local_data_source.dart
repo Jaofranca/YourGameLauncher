@@ -10,7 +10,7 @@ abstract class GameLocalDataSource {
   Future<void> deleteGame(Game game);
 }
 
-class GameLocalDataSourceImplementation implements GameLocalDataSource {
+class GameLocalDataSourceImpl implements GameLocalDataSource {
   @override
   Future<List<Game>> getGames() async {
     var games = Hive.box('games').values;

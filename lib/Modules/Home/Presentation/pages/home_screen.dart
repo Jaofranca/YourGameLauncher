@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/add_game_dialog.dart';
 import '../widgets/game_column.dart';
 
 class HomePage extends StatelessWidget {
@@ -29,7 +30,13 @@ class HomePage extends StatelessWidget {
                       ),
                       child: IconButton(
                         icon: const Icon(Icons.add),
-                        onPressed: () {},
+                        onPressed: () {
+                          showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return const AddGameDialog();
+                              });
+                        },
                       )),
                   const SizedBox(
                     height: 100,

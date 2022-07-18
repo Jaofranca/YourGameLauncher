@@ -8,9 +8,9 @@ abstract class AddGameUseCase {
   Future<Either<Failure, void>> call(Game game);
 }
 
-class AddGameUseCaseImplementation implements AddGameUseCase {
+class AddGameUseCaseImpl implements AddGameUseCase {
   final GameRepository gameRepository;
-  AddGameUseCaseImplementation({required this.gameRepository});
+  AddGameUseCaseImpl({required this.gameRepository});
 
   @override
   Future<Either<Failure, void>> call(Game game) async {

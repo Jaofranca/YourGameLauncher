@@ -8,9 +8,9 @@ abstract class DeleteGameUseCase {
   Future<Either<Failure, void>> call(Game game);
 }
 
-class DeleteGameUseCaseImplementation implements DeleteGameUseCase {
+class DeleteGameUseCaseImpl implements DeleteGameUseCase {
   final GameRepository gameRepository;
-  DeleteGameUseCaseImplementation(this.gameRepository);
+  DeleteGameUseCaseImpl({required this.gameRepository});
   @override
   Future<Either<Failure, void>> call(game) async {
     return await gameRepository.deleteGame(game);

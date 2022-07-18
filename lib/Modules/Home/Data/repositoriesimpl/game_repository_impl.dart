@@ -9,10 +9,10 @@ import '../datasources/game/game_remote_data_source.dart';
 
 class GameRepositoryImpl implements GameRepository {
   final GameLocalDataSource localDataSource;
-  final GameRemoteDataSource remoteDataSource;
+  // final GameRemoteDataSource remoteDataSource;
   GameRepositoryImpl({
     required this.localDataSource,
-    required this.remoteDataSource,
+    // required this.remoteDataSource,
   });
   @override
   Future<Either<Failure, List<Game>>> getGames() async {
