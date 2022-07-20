@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../widgets/add_game_dialog.dart';
 import '../widgets/game_column.dart';
 
 class HomePage extends StatelessWidget {
@@ -17,31 +15,8 @@ class HomePage extends StatelessWidget {
             Flexible(
               flex: 1,
               child: Column(
-                children: [
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Container(
-                      height: 50,
-                      width: 50,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.grey,
-                      ),
-                      child: IconButton(
-                        icon: const Icon(Icons.add),
-                        onPressed: () {
-                          showDialog(
-                              context: context,
-                              builder: (BuildContext context) {
-                                return const AddGameDialog();
-                              });
-                        },
-                      )),
-                  const SizedBox(
-                    height: 100,
-                  ),
-                  const Expanded(
+                children: const [
+                  Expanded(
                     child: GameColumn(),
                   ),
                 ],

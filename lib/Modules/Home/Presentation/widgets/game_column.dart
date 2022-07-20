@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:your_game_launcher/Modules/Home/Presentation/widgets/add_game_button.dart';
 
+import 'add_game_dialog.dart';
 import 'game_icon.dart';
 
 class GameColumn extends StatelessWidget {
@@ -18,10 +20,13 @@ class GameColumn extends StatelessWidget {
         },
       ),
       child: ListView.builder(
-        clipBehavior: Clip.none,
-        shrinkWrap: true,
+        clipBehavior: Clip.antiAlias,
         itemBuilder: (BuildContext context, int index) {
-          return const GameIcon();
+          if (index == 0) {
+            return const AddGameButton();
+          } else {
+            return const GameIcon();
+          }
         },
         itemCount: 20,
         scrollDirection: Axis.vertical,
